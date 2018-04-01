@@ -15,4 +15,34 @@
     <ProjectReference Include="..\TagHelperChildContent.Shared\TagHelperChildContent.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <BlazorGenerate Remove="Shared\Outer.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Shared\Outer.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Shared\Inner.cshtml" />
+    <None Include="Shared\Outer.cshtml" />
+    <None Include="Shared\WithChild.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <BlazorGenerate Remove="Shared\Inner.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Shared\Inner.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <BlazorGenerate Remove="Shared\WithChild.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Shared\WithChild.cshtml" />
+  </ItemGroup>
+
 </Project>

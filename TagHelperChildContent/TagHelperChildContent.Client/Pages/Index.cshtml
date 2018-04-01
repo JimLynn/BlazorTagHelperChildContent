@@ -1,7 +1,41 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+<div class="row">
+    <div class="col-sm-6">
+        <label>Name</label>
+        <input type="text" class="form-control" @bind(Name) />
+        <label>Description</label>
+        <input type="text" class="form-control" @bind(Description) />
+        <button type="button" class="btn btn-primary" @onclick(()=>CreateThing()) >Click To Create</button>
+    </div>
+</div>
 
-Welcome to your new app.
+<WithChild>
+    <div>This is inside child content</div>
+    <button type="button" class="btn btn-primary" @onclick(()=>CreateThing()) >Click To Create (Inside)</button>
+</WithChild>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<div class="row">
+    <div class="col-sm-12">
+        <Outer Thing="Thing"></Outer>
+    </div>
+</div>
+
+@functions
+{
+    public Thing Thing { get; set; }
+
+    public string Name { get; set; }
+    public string Description { get; set; }
+
+    public void CreateThing()
+    {
+        var thing = new Thing
+        {
+            Name = Name,
+            Description = Description
+        };
+
+        Thing = thing;
+    }
+}

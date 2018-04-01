@@ -1,0 +1,23 @@
+﻿<h3>Outer Container</h3>
+
+@if (Thing == null)
+{
+    <div>Thing not set to anything</div>
+}
+else
+{
+    <h4>Thing Set To</h4>
+    <ul>
+        <li>Name: @Thing.Name</li>
+        <li>Description: @Thing.Description</li>
+    </ul>
+}
+
+<div>Looking at inner container</div>
+
+<Inner Thing="Thing"></Inner>
+
+@functions
+{
+    public Thing Thing { get; set; }
+}
