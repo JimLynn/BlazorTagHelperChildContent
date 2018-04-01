@@ -9,6 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagHelperChildContent.Clien
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagHelperChildContent.Shared", "TagHelperChildContent\TagHelperChildContent.Shared\TagHelperChildContent.Shared.csproj", "{C17E0716-2DBF-4CB9-A3C3-B3FDD5D45207}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E6D250E0-992B-4FFC-AD00-012D546C440F}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
